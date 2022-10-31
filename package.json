@@ -1,0 +1,33 @@
+{
+  "name": "vue3-elementplus",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode development",
+    "build": "vite build --mode production",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.9",
+    "axios": "^0.27.2",
+    "element-plus": "^2.2.16",
+    "nprogress": "^0.2.0",
+    "qs": "^6.11.0",
+    "screenfull": "^6.0.2",
+    "vue": "^3.2.37",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.5",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.0",
+    "pug": "^3.0.2",
+    "stylus": "^0.59.0",
+    "stylus-loader": "^7.0.0",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-vue-components": "^0.22.4",
+    "vite": "^3.1.0",
+    "vite-plugin-compression": "^0.5.1"
+  }
+}

@@ -1,2 +1,2 @@
-# vue3-vite-elementPlus
-这是基于vue3+vite+elementui 搭建的后台管理系统
+# whiskyma-vue3-vite-elementplus
+使用vue3+vite+elementplus构建后台管理系统

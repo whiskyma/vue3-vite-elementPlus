@@ -1,0 +1,267 @@
+@import './element.styl'
+
+body,html
+    width:100%;
+    height:100%;
+    font-size:15px;
+    overflow-x: hidden
+    color: #333;
+*
+    margin:0;
+    padding:0;
+    list-style:none;
+i,em,b
+    font-style:normal;
+    font-weight:normal;
+input,textarea,select
+    -webkit-appearance:none;
+    border:0;
+    background:transparent;
+button,input,input[type=button]:focus
+    overflow visible
+    outline none
+    border 0
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+input,a,span
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+a
+    text-decoration none
+    color #666
+#app
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    height:100%;
+
+.display-enter,.display-leave-active
+    opacity: 0
+.display-enter-active,.display-leave
+    transition: all .5s ease
+    -moz-transition: all .5s ease
+    -webkit-transition: all .5s ease
+    -o-transition: all .5s ease
+
+space-between()
+    display: flex
+    justify-content: space-between
+    align-items: center
+between()
+    position absolute
+    top 45%
+    left 50%
+    transform: translate(-50%, -50%)
+
+ /* 过度动画 */
+.fade-enter-active
+    transition: all 0.3s ease-out;
+
+.fade-leave-active
+    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+
+.fade-enter-from,
+.fade-leave-to
+    transform: translateX(20px);
+    opacity: 0;
+
+
+
+// login
+.login
+    height 100%
+    position relative
+    background: url("@/assets/images/bj.jpg") top/cover no-repeat
+    background-attachment: fixed;
+    .model
+        between()
+        background-color #fff
+        border-radius 8px
+        .box
+            width 400px
+            height: 360px
+            padding 10px
+            .el-dropdown
+                position: absolute;
+                top: 26px;
+                right: 70px;
+            .i18n
+                width: 25px;
+                height: 25px;
+                background: url(@/assets/images/i18n.svg) no-repeat center/cover
+                cursor: pointer
+        h1
+            position: absolute;
+            width: 800px;
+            top: -80px;
+            font-size: 40px;
+            font-weight: 400;
+            color: #fff;
+            text-align: center;
+            left: 50%;
+            transform: translateX(-50%);
+        .checkbox
+            .el-form-item__content
+                space-between()
+                margin-bottom: 20px;
+            p
+                font-size: 14px;
+                color: #1890ff;
+                cursor: pointer;
+    .login-footer
+        position: fixed
+        bottom: 10px
+        width: 100%
+        text-align: center
+    .el-form
+        width 280px
+        margin 0 auto
+    h3
+        color: #6b6b6b
+        font-weight: 400
+        font-size: 16px
+        text-align: center
+        margin: 15px auto 35px
+
+// layout
+.layout
+    width 100%
+    height 100%
+    position relative
+    .left
+        width 200px
+        position fixed
+        top 0
+        left 0
+        bottom 0
+        overflow-y: auto
+        transition ease-in-out .28s
+        .logo
+            height: 50px
+            line-height: 50px
+            text-align: center
+            // background: url('./../../assets/images/logo.svg') no-repeat 50%/contain
+            background-color: #2b2f3a;
+            cursor: pointer
+            color: #fff
+        .menu
+            position: fixed
+            top: 50px
+            left: 0
+            bottom: 0
+            width: 200px
+            background-color: rgb(48, 65, 86);
+            transition ease-in-out .28s
+    .l-close
+        width 65px
+    .right
+        background-color: #f7f7f7
+        height 100%
+        transition ease-in-out .28s
+        position fixed
+        top 0
+        right 0
+        bottom 0
+        left 200px
+        .view-head
+            height 50px
+            line-height 50px
+            background-color #fff
+            padding 0 20px
+            space-between()
+            .head-left
+                display: flex
+                align-items: center
+                i
+                    padding-right: 10px
+                    cursor: pointer;
+                span
+                    color: #97a8be;
+            .head-right
+                display: flex
+                align-items: center
+                i
+                    cursor pointer
+                    margin-right: 15px;
+                p
+                    color: #f00
+        .view-nav
+            background-color: #fff
+            margin: 5px 10px
+            padding: 7px 10px
+            border-radius: 4px;
+            height: 40px;
+        .view-con
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            top: 50px;
+            overflow-y: auto;
+
+.userName
+    font-size 20px
+    cursor pointer
+    color #409EFF
+    text-align: center;
+
+.closeSidebar
+    .left,.menu
+        width: 60px
+    .right
+        left: 60px
+// container_404
+.container_404
+    width 100%
+    height 100%
+    background: url("@/assets/images/404.gif") center/cover no-repeat
+    cursor: pointer
+    position relative
+    .el-button
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        width: 115px;
+        height: 40px;
+        font-size: 16px;
+
+// 
+.tb-form
+    display: flex;
+    .el-form-item__label
+        color: #606266
+        font-weight: 500;
+    .el-form-item
+        width: 250px;
+        margin-right: 18px;
+        align-items: center;
+        .el-input__inner
+            height: 38px
+        .select-trigger
+            width: 200px
+    .el-button
+        height: 39px;
+        margin-left: 20px;
+
+// pagination
+.pagination
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+// .imgbg
+.imgbg
+    width: 100px
+    height: 80px;
+    border-radius: 8px;
+    background-size: 100% 100%;
+    cursor: pointer;
+    background-position: center;
+    background-image: url("@/assets/images/default.png")
+    margin: auto;
+.put-90
+    width: 90px
+.put-130
+    width: 130px
+.put-150
+    width: 150px
+.put-180
+    width: 180px
