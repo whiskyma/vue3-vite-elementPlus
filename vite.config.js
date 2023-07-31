@@ -5,6 +5,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import viteCompression from 'vite-plugin-compression';
+import unocss from 'unocss/vite'  //引入unocss
 
 function getDay() {
     const myDate = new Date();
@@ -39,7 +40,8 @@ export default defineConfig(({command, mode}) => {
                 threshold: 10240,
                 algorithm: 'gzip',
                 ext: '.gz',
-            })
+            }),
+            unocss() //引入unocss
         ],
         base: loadEnv(mode, process.cwd()).DEV ? './':'./',
         publicDir: "public",

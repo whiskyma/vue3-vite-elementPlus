@@ -8,7 +8,8 @@ import * as ELIcons from '@element-plus/icons-vue'
 import 'element-plus/dist/index.css'
 import { menuData, setLocal, getLocal } from '@js/com.js'
 import * as directives from '@comp/directives'
-// console.log(directives)
+import 'uno.css' //引入unocss
+
 
 Object.keys(directives).forEach(key => {  //Object.keys() 返回一个数组，值是所有可遍历属性的key名
     app.directive(key, directives[key])  //key是自定义指令名字；后面应该是自定义指令的值，值类型是string
